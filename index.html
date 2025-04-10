@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NYTimes-Inspired Front Page</title>
+  <title>The Times-Inspired Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900 font-serif">
+
+  <!-- Country Section -->
+  <div class="text-xs text-gray-600 text-center py-1 border-b">
+    Edition: United States
+  </div>
 
   <!-- Header -->
   <header class="border-b border-gray-300 p-4 text-center">
@@ -14,17 +19,36 @@
     <p class="text-sm text-gray-600">Thursday, April 10, 2025</p>
   </header>
 
-  <!-- Navigation -->
-  <nav class="border-b border-gray-300 flex justify-center space-x-4 p-2 text-sm font-medium">
-    <a href="#" class="hover:underline">World</a>
-    <a href="#" class="hover:underline">U.S.</a>
-    <a href="#" class="hover:underline">Politics</a>
-    <a href="#" class="hover:underline">Business</a>
-    <a href="#" class="hover:underline">Tech</a>
-    <a href="#" class="hover:underline">Science</a>
-    <a href="#" class="hover:underline">Health</a>
-    <a href="#" class="hover:underline">Sports</a>
-    <a href="#" class="hover:underline">Arts</a>
+  <!-- Navigation with Dropdowns -->
+  <nav class="border-b border-gray-300 flex justify-center space-x-6 p-3 text-sm font-medium relative">
+    <div class="group relative">
+      <button class="hover:underline">World</button>
+      <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 p-2 space-y-1 text-xs z-10">
+        <a href="#" class="block hover:underline">Africa</a>
+        <a href="#" class="block hover:underline">Asia</a>
+        <a href="#" class="block hover:underline">Europe</a>
+      </div>
+    </div>
+
+    <div class="group relative">
+      <button class="hover:underline">U.S.</button>
+      <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 p-2 space-y-1 text-xs z-10">
+        <a href="#" class="block hover:underline">Politics</a>
+        <a href="#" class="block hover:underline">Education</a>
+        <a href="#" class="block hover:underline">Economy</a>
+      </div>
+    </div>
+
+    <div class="group relative">
+      <button class="hover:underline">Business</button>
+      <div class="absolute hidden group-hover:block bg-white shadow-lg mt-2 p-2 space-y-1 text-xs z-10">
+        <a href="#" class="block hover:underline">Markets</a>
+        <a href="#" class="block hover:underline">Tech</a>
+      </div>
+    </div>
+
+    <a href="#" class="hover:underline">The L.F. Report</a>
+    <a href="#" class="hover:underline">The Gazelle</a>
   </nav>
 
   <!-- Main Content -->
