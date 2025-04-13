@@ -5,11 +5,21 @@ A non-profit blog platform for social impact projects
 [screenshot]
 
 🚀 Features (in-progress)
+
+completed:
+
+Inprogress:
+
 Responsive UI (HTML/CSS/JavaScript)
+
+upcoming:
 
 Article uploading system 
 
-[other features]
+donation portal
+
+volunteer login system & dashboard
+
 
 🛠️ Tech Stack
 Frontend: HTML5, CSS3, JavaScript
@@ -21,13 +31,5 @@ Hosting: GitHub Pages
 🌐 Live Demo
 🔗 www.lynx.foundation
 
-🎯 Goals
 
-Improve UI/UX 
-
-Add donation portal
-
-add volunteer login system & dashboard
-
-[other]
 
