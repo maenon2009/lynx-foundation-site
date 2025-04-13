@@ -3,131 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> The Lynx Foundation</title>
+  <title>The Lynx Foundation</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @font-face {
-      font-family: 'Lodeh';
-      src: url('Lodeh-VGLD6.ttf') format('truetype');
-    }
-
-    .fancy-font {
-      font-family: 'Lodeh', serif;
-    }
-
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background-color: white;
-    }
-  </style>
 </head>
 <body class="bg-white text-gray-900 font-serif">
   <div class="container mx-auto px-4" style="max-width: 1200px;">
-    <!-- Top Bar -->
-    <div class="flex justify-between items-center px-4 py-2 text-xs">
-      <!-- Left: Search -->
-      <div class="flex items-center space-x-2">
-        <button id="searchToggle" class="text-gray-700 hover:text-black text-sm">🔍</button>
-        <input type="text" id="searchBar" placeholder="Search..." 
-               class="hidden px-2 py-1 border border-gray-300 rounded text-xs w-48 transition duration-200" />
-      </div>
-      <!-- Center: Country Links -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center text-gray-600 space-x-2">
-        <a href="/us.html" class="hover:underline px-1">U.S.</a>
-        <a href="/eu.html" class="hover:underline px-1">E.U.</a>
-        <a href="/india.html" class="hover:underline px-1">India</a>
-        <a href="/international.html" class="hover:underline px-1">International</a>
-      </div>
-
-      <!-- Right: Subscribe + Volunteer Dropdown -->
-      <div class="flex items-center space-x-4 text-sm">
-        <a href="#" class="bg-black text-white px-4 py-1 rounded hover:bg-gray-800 transition">
-          Subscribe For ₹25/Week
-        </a>
-        <div class="group relative">
-          <button class="hover:underline flex items-center">
-            Volunteer <span class="ml-1">▼</span>
-          </button>
-          <div class="absolute right-0 mt-2 bg-white shadow-lg p-2 space-y-1 text-xs z-10 w-40 
-                      opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto 
-                      transition duration-150">
-            <a href="#" class="block hover:underline">Login</a>
-            <a href="#" class="block hover:underline">Signup</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header with Logo, Date, and Today's Paper -->
-    <header class="flex items-center justify-between py-6 bg-white">
-      <!-- Date and Today's Paper -->
-      <div class="flex flex-col items-start text-gray-600">
-        <div>Thursday, April 10, 2025</div>
-        <a href="#" class="hover:underline text-gray-800 mt-1">Today’s Paper</a>
-      </div>
-      <!-- Logo -->
-      <h1 class="text-5xl font-bold tracking-wide fancy-font text-center absolute left-1/2 transform -translate-x-1/2">
-        The Lynx Foundation
-      </h1>
-      <!-- Empty space for alignment -->
-      <div class="flex-1"></div>
-    </header>
-
-    <!-- Sticky Navigation Bar -->
-    <nav class="sticky-nav flex justify-center space-x-6 p-3 text-sm font-medium bg-white z-50">
-      <!-- World Dropdown -->
-      <div class="group relative">
-        <button class="hover:underline flex items-center">
-          World <span class="ml-1">▼</span>
-        </button>
-        <div class="absolute left-0 mt-2 bg-white shadow-lg p-2 space-y-1 text-xs z-10 w-40 
-                    opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto 
-                    transition duration-150">
-          <a href="#" class="block hover:underline">Africa</a>
-          <a href="#" class="block hover:underline">Asia</a>
-          <a href="#" class="block hover:underline">Europe</a>
-        </div>
-      </div>
-
-      <!-- U.S. Dropdown -->
-      <div class="group relative">
-        <button class="hover:underline flex items-center">
-          U.S. <span class="ml-1">▼</span>
-        </button>
-        <div class="absolute left-0 mt-2 bg-white shadow-lg p-2 space-y-1 text-xs z-10 w-40 
-                    opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto 
-                    transition duration-150">
-          <a href="#" class="block hover:underline">Politics</a>
-          <a href="#" class="block hover:underline">Education</a>
-          <a href="#" class="block hover:underline">Economy</a>
-        </div>
-      </div>
-
-      <!-- Business Dropdown -->
-      <div class="group relative">
-        <button class="hover:underline flex items-center">
-          Business <span class="ml-1">▼</span>
-        </button>
-        <div class="absolute left-0 mt-2 bg-white shadow-lg p-2 space-y-1 text-xs z-10 w-40 
-                    opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto 
-                    transition duration-150">
-          <a href="#" class="block hover:underline">Markets</a>
-          <a href="#" class="block hover:underline">Tech</a>
-        </div>
-      </div>
-
-      <!-- Static Links -->
-      <a href="#" class="hover:underline">The L.F. Report</a>
-      <a href="#" class="hover:underline">The Gazelle</a>
-    </nav>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Content -->
-    <main class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    <main class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Lead Story -->
       <section class="md:col-span-2">
-        <img src="https://via.placeholder.com/800x400" alt="Lead Story" class="mb-4 w-full rounded">
+        <img src="https://via.placeholder.com/800x400" alt="Lead Story Image" class="mb-4 w-full rounded">
         <h2 class="text-2xl font-bold mb-2">Major Headline: Breaking News Event</h2>
         <p class="text-gray-700 mb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
@@ -156,107 +44,55 @@
       <!-- More Stories -->
       <section class="md:col-span-3 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <article>
-          <img src="https://via.placeholder.com/300x200" alt="" class="rounded mb-2 w-full">
+          <img src="https://via.placeholder.com/300x200" alt="Story Image 1" class="rounded mb-2 w-full">
           <h4 class="font-semibold mb-1">Story Title</h4>
           <p class="text-sm text-gray-600">Brief story description goes here.</p>
         </article>
         <article>
-          <img src="https://via.placeholder.com/300x200" alt="" class="rounded mb-2 w-full">
+          <img src="https://via.placeholder.com/300x200" alt="Story Image 2" class="rounded mb-2 w-full">
           <h4 class="font-semibold mb-1">Another Headline</h4>
           <p class="text-sm text-gray-600">Short preview of the content for this piece.</p>
         </article>
         <article>
-          <img src="https://via.placeholder.com/300x200" alt="" class="rounded mb-2 w-full">
+          <img src="https://via.placeholder.com/300x200" alt="Story Image 3" class="rounded mb-2 w-full">
           <h4 class="font-semibold mb-1">World Focus</h4>
           <p class="text-sm text-gray-600">Explore what’s going on internationally.</p>
         </article>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 py-10 text-gray-700 text-sm">
-      <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-6">
-        <!-- News Section -->
-        <div>
-          <h3 class="font-bold mb-2">NEWS</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Home Page</a></li>
-            <li><a href="#" class="hover:underline">U.S.</a></li>
-            <li><a href="#" class="hover:underline">World</a></li>
-            <li><a href="#" class="hover:underline">Politics</a></li>
-            <li><a href="#" class="hover:underline">Business</a></li>
-          </ul>
-        </div>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
-        <!-- Arts Section -->
-        <div>
-          <h3 class="font-bold mb-2">ARTS</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Movies</a></li>
-            <li><a href="#" class="hover:underline">Music</a></li>
-            <li><a href="#" class="hover:underline">Television</a></li>
-            <li><a href="#" class="hover:underline">Theater</a></li>
-            <li><a href="#" class="hover:underline">Visual Arts</a></li>
-          </ul>
-        </div>
-
-        <!-- Lifestyle Section -->
-        <div>
-          <h3 class="font-bold mb-2">LIFESTYLE</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Health</a></li>
-            <li><a href="#" class="hover:underline">Food</a></li>
-            <li><a href="#" class="hover:underline">Travel</a></li>
-            <li><a href="#" class="hover:underline">Style</a></li>
-            <li><a href="#" class="hover:underline">Real Estate</a></li>
-          </ul>
-        </div>
-
-        <!-- Opinion Section -->
-        <div>
-          <h3 class="font-bold mb-2">OPINION</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Today’s Opinion</a></li>
-            <li><a href="#" class="hover:underline">Editorials</a></li>
-            <li><a href="#" class="hover:underline">Guest Essays</a></li>
-            <li><a href="#" class="hover:underline">Letters</a></li>
-          </ul>
-        </div>
-
-        <!-- Account Section -->
-        <div>
-          <h3 class="font-bold mb-2">ACCOUNT</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Subscribe</a></li>
-            <li><a href="#" class="hover:underline">Manage My Account</a></li>
-            <li><a href="#" class="hover:underline">Home Delivery</a></li>
-            <li><a href="#" class="hover:underline">Gift Subscriptions</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="border-t mt-6 pt-6 text-center text-xs text-gray-500">
-        <p>© 2025 The Lynx Foundation. All rights reserved.</p>
-        <p>
-          <a href="#" class="hover:underline">Contact Us</a> | 
-          <a href="#" class="hover:underline">Privacy Policy</a> | 
-          <a href="#" class="hover:underline">Terms of Service</a>
-        </p>
-      </div>
-    </footer>
-
-    <!-- Search Toggle Script -->
     <script>
-      const searchToggle = document.getElementById('searchToggle');
-      const searchBar = document.getElementById('searchBar');
+      // Load the navbar dynamically
+      fetch('homepagenav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
 
-      searchToggle.addEventListener('click', () => {
-        searchBar.classList.toggle('hidden');
-        if (!searchBar.classList.contains('hidden')) {
-          searchBar.focus();
-        }
-      });
+          // Attach the search toggle functionality after the navbar is loaded
+          const searchToggle = document.getElementById('searchToggle');
+          const searchBar = document.getElementById('searchBar');
+
+          if (searchToggle && searchBar) {
+            searchToggle.addEventListener('click', () => {
+              searchBar.classList.toggle('hidden');
+              if (!searchBar.classList.contains('hidden')) {
+                searchBar.focus();
+              }
+            });
+          }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+
+      // Load the footer dynamically
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
     </script>
   </div>
 </body>
