@@ -1,6 +1,6 @@
 # Lynx Foundation Website (WIP)
 
-A non-profit blog platform for social impact projects
+A non-profit news/blog platform for our social impact projects
 
 ![image](https://github.com/user-attachments/assets/ae94efe3-3ba1-48cc-b55b-d54fd7474cb5)
 
