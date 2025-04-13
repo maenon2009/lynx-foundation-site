@@ -2,7 +2,8 @@
 
 A non-profit blog platform for social impact projects
 
-[screenshot]
+![image](https://github.com/user-attachments/assets/ae94efe3-3ba1-48cc-b55b-d54fd7474cb5)
+
 
 🚀 Features (in-progress)
 
