@@ -6,25 +6,25 @@ A non-profit blog platform for social impact projects
 
 🚀 Features (in-progress)
 
-completed:
+- completed:
 
-Inprogress:
+- Inprogress:
 
-Responsive UI (HTML/CSS/JavaScript)
+  Responsive UI (HTML/CSS/JavaScript)
 
-upcoming:
+- upcoming:
 
-Article uploading system 
+  Article uploading system 
 
-donation portal
+  donation portal
 
-volunteer login system & dashboard
+  volunteer login system & dashboard
 
 
 🛠️ Tech Stack
 Frontend: HTML5, CSS3, JavaScript
 
-Tools: Git, GitHub, TailwindCSS [Others]
+Tools: Git, GitHub, TailwindCSS
 
 Hosting: GitHub Pages
 
