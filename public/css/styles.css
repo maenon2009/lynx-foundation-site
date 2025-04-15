@@ -1,0 +1,167 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary: #2c5282;  /* Lynx brand blue */
+    --primary-dark: #1a365d;
+    --accent: #e53e3e;   /* Accent red */
+    --light-bg: #f7fafc;
+    --dark-text: #1a202c;
+    --gray-text: #4a5568;
+    --border-color: #e2e8f0;
+  }
+  
+  /* Fonts */
+  @font-face {
+    font-family: 'Lodeh';
+    src: url('../fonts/Lodeh-VGLD6.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'Lora', serif; /* Classic news font */
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: #ffffff;
+  }
+  
+  /* ===== Typography ===== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin: 1.2rem 0;
+  }
+  
+  a {
+  /* color: #3182ce; */
+  /* text-decoration: none; */
+  /* transition: all 0.2s ease; */
+}
+
+a:hover {
+  /* color: var(--primary-dark); */
+  /* text-decoration: underline; */
+}
+  
+  /* ===== Layout Components ===== */
+  .container {  
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header/Nav */
+  .site-header {
+    border-bottom: 3px double var(--border-color);
+    padding: 1rem 0;
+  }
+  
+  /* Navbar */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+  }
+  
+  /* Articles */
+  .article-card {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* ===== Dashboard-Specific Styles ===== */
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    background: var(--primary-dark);
+    color: white;
+  }
+  
+  .sidebar a {
+    color: white;
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+  
+  .sidebar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+  
+  /* Login Forms */
+  .login-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+  }
+  
+  /* ===== Utility Classes ===== */
+  .text-center { text-align: center; }
+  .text-accent { color: var(--accent); }
+  .bg-light { background-color: var(--light-bg); }
+  .p-4 { padding: 1rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .rounded { border-radius: 0.25rem; }
+  .hidden { display: none; }
+  .flex { display: flex; }
+  .space-x-2 { gap: 0.5rem; }
+  
+  /* ===== Responsive Adjustments ===== */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      height: auto;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  
+  /* Fancy Font */
+  .fancy-font {
+    font-family: 'Lodeh', serif;
+  }

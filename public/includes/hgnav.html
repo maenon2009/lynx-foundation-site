@@ -1,21 +1,3 @@
-<style>
-  @font-face {
-    font-family: 'Lodeh';
-    src: url('Lodeh-VGLD6.ttf') format('truetype');
-  }
-
-  .fancy-font {
-    font-family: 'Lodeh', serif;
-  }
-
-  .sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background-color: white;
-  }
-</style>
-
 <!-- Top Bar -->
 <div class="flex justify-between items-center px-4 py-2 text-xs">
   <!-- Left: Search -->
@@ -27,10 +9,10 @@
 
   <!-- Center: Country Links -->
   <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center text-gray-600 space-x-2">
-    <a href="/us.html" class="hover:underline px-1">U.S.</a>
-    <a href="/eu.html" class="hover:underline px-1">E.U.</a>
-    <a href="/india.html" class="hover:underline px-1">India</a>
-    <a href="/international.html" class="hover:underline px-1">International</a>
+    <a href="us.html" class="hover:underline px-1">U.S.</a>
+    <a href="uk.html" class="hover:underline px-1">U.K.</a>
+    <a href="india.html" class="hover:underline px-1">India</a>
+    <a href="index.html" class="hover:underline px-1">International</a>
   </div>
 
   <!-- Right: Subscribe + Volunteer Dropdown -->
@@ -124,12 +106,5 @@
   <hr class="border-t border-black">
 </div>
 
-<script>
-  // Automatically update the date to today's date
-  document.addEventListener('DOMContentLoaded', () => {
-    const currentDateElement = document.getElementById('current-date');
-    const today = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    currentDateElement.textContent = today.toLocaleDateString('en-US', options);
-  });
-</script>
+<!-- Removed script as it is now in main.js -->
+

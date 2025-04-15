@@ -1,0 +1,105 @@
+<style>
+  @font-face {
+    font-family: 'Lodeh';
+    src: url('Lodeh-VGLD6.ttf') format('truetype');
+  }
+
+  .fancy-font {
+    font-family: 'Lodeh', serif;
+  }
+
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .tariff-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .tariff-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .tariff-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+    text-decoration: none;
+  }
+
+  .tariff-links a:hover {
+    text-decoration: underline;
+  }
+
+  .account-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .subscribe-btn {
+    background-color: #000;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .subscribe-btn:hover {
+    background-color: #333;
+  }
+</style>
+
+<!-- Tariff Navigation Bar -->
+<div class="tariff-nav">
+  <div class="tariff-links">
+    <a href="#">What to Know</a>
+    <a href="#">Fact Check</a>
+    <a href="#">Timeline</a>
+    <a href="#">Inside Trump's Reversal</a>
+    <a href="#">Costs of Chinese Goods</a>
+  </div>
+  
+  <div class="account-section">
+    <a href="#" class="subscribe-btn">SUBSCRIBE FOR 2%/WEEK</a>
+    <a href="#">Account</a>
+  </div>
+</div>
+
+<!-- Main Navigation Bar -->
+<nav class="sticky-nav flex justify-between items-center px-6 py-4">
+  <!-- Left: Search -->
+  <div class="flex items-center space-x-2">
+    <button id="searchToggle" class="text-gray-700 hover:text-black">🔍</button>
+    <input type="text" id="searchBar" placeholder="Search..." 
+           class="hidden px-2 py-1 border border-gray-300 rounded text-sm w-48 transition duration-200" />
+  </div>
+
+  <!-- Center: Logo -->
+  <h1 class="text-4xl font-bold fancy-font">
+    Ebe New York Times
+  </h1>
+
+  <!-- Right: Navigation Links -->
+  <div class="flex items-center space-x-6">
+    <a href="#" class="hover:underline">U.S.</a>
+    <a href="#" class="hover:underline">E.U.</a>
+    <a href="#" class="hover:underline">India</a>
+    <a href="#" class="hover:underline">International</a>
+  </div>
+</nav>
+
+<!-- Double-lined Divider -->
+<div class="border-t border-gray-300"></div>
+
