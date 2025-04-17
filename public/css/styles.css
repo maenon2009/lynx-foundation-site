@@ -7,161 +7,217 @@
     --dark-text: #1a202c;
     --gray-text: #4a5568;
     --border-color: #e2e8f0;
-  }
-  
-  /* Fonts */
-  @font-face {
+}
+
+/* Fonts */
+@font-face {
     font-family: 'Lodeh';
     src: url('../fonts/Lodeh-VGLD6.ttf') format('truetype');
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Lora', serif; /* Classic news font */
     line-height: 1.6;
     color: var(--dark-text);
     background-color: #ffffff;
-  }
-  
-  /* ===== Typography ===== */
-  h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Remove default browser margins */
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 2rem;
     margin: 1.2rem 0;
-  }
-  
-  a {
-  /* color: #3182ce; */
-  /* text-decoration: none; */
-  /* transition: all 0.2s ease; */
+}
+
+a {
+    /* color: #3182ce; */
+    /* text-decoration: none; */
+    /* transition: all 0.2s ease; */
 }
 
 a:hover {
-  /* color: var(--primary-dark); */
-  /* text-decoration: underline; */
+    /* color: var(--primary-dark); */
+    /* text-decoration: underline; */
 }
-  
-  /* ===== Layout Components ===== */
-  .container {  
+
+/* ===== Layout Components ===== */
+.container {  
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  /* Header/Nav */
-  .site-header {
+    padding: 0 1rem; /* Ensure content stays within the margins */
+    box-sizing: border-box; /* Include padding in width calculations */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Header/Nav */
+.site-header {
     border-bottom: 3px double var(--border-color);
-    padding: 1rem 0;
-  }
-  
-  /* Navbar */
-  .sticky-nav {
+    padding: 0.5rem 0; /* Adjust padding to reduce space around the logo */
+    margin-bottom: 0.5rem; /* Reduce space between the header and the navbar */
+}
+
+/* Navbar */
+.sticky-nav {
     position: sticky;
     top: 0;
     z-index: 50;
     background-color: white;
-  }
-  
-  /* Articles */
-  .article-card {
+    padding: 0.5rem; /* Adjust padding to reduce navbar height */
+    font-size: 0.875rem; /* Adjust font size if needed */
+    margin-bottom: 0.25rem; /* Reduce space below the navbar */
+    margin-top: 0.25rem; /* Reduce space above the navbar */
+    border-bottom: 1px solid var(black ); /* Add a bottom border for separation */
+    max-width: 100%; /* Ensure navbar stays within the container */
+    box-sizing: border-box;
+}
+
+.sticky-nav .group .absolute {
+    padding: 0.25rem; /* Reduced dropdown padding */
+}
+
+.sticky-nav .btn {
+    padding: 0.125rem 0.25rem; /* Reduce padding to half the current size */
+    font-size: 0.625rem; /* Reduce font size to half (10px) */
+    max-width: 100%; /* Ensure buttons stay within the container */
+}
+
+.sticky-nav .btn-primary {
+    background-color: black;
+    color: white;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.sticky-nav .btn-primary:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}
+
+.sticky-nav .group button {
+    padding: 0.125rem 0.25rem; /* Reduce padding for the Volunteer button */
+    font-size: 0.625rem; /* Reduce font size to half (10px) */
+    max-width: 100%; /* Ensure buttons stay within the container */
+}
+
+/* Search Bar Button */
+#searchToggle {
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the very top */
+    left: 1rem; /* Align with the left margin of the container */
+    padding: 0.5rem; /* Ensure padding for clickability */
+    z-index: 100; /* Ensure it stays on top */
+}
+
+/* Articles */
+.article-card {
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.2s;
-  }
-  
-  .article-card:hover {
+}
+
+.article-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Buttons */
-  .btn {
+}
+
+/* Buttons */
+.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     font-weight: 600;
     text-align: center;
-  }
-  
-  .btn-primary {
+    max-width: 100%; /* Ensure buttons stay within the container */
+}
+
+.btn-primary {
     background-color: var(--primary);
     color: white;
-  }
-  
-  .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: var(--primary-dark);
-  }
-  
-  /* ===== Dashboard-Specific Styles ===== */
-  .dashboard-container {
+}
+
+/* ===== Dashboard-Specific Styles ===== */
+.dashboard-container {
     display: grid;
     grid-template-columns: 240px 1fr;
     min-height: 100vh;
-  }
-  
-  .sidebar {
+}
+
+.sidebar {
     background: var(--primary-dark);
     color: white;
-  }
-  
-  .sidebar a {
+}
+
+.sidebar a {
     color: white;
     display: block;
     padding: 0.75rem 1rem;
-  }
-  
-  .sidebar a:hover {
+}
+
+.sidebar a:hover {
     background: rgba(255, 255, 255, 0.1);
     text-decoration: none;
-  }
-  
-  /* Login Forms */
-  .login-form {
+}
+
+/* Login Forms */
+.login-form {
     max-width: 400px;
     margin: 2rem auto;
     padding: 2rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-  }
-  
-  /* ===== Utility Classes ===== */
-  .text-center { text-align: center; }
-  .text-accent { color: var(--accent); }
-  .bg-light { background-color: var(--light-bg); }
-  .p-4 { padding: 1rem; }
-  .mb-4 { margin-bottom: 1rem; }
-  .rounded { border-radius: 0.25rem; }
-  .hidden { display: none; }
-  .flex { display: flex; }
-  .space-x-2 { gap: 0.5rem; }
-  
-  /* ===== Responsive Adjustments ===== */
-  @media (max-width: 768px) {
+}
+
+/* ===== Utility Classes ===== */
+.text-center { text-align: center; }
+.text-accent { color: var(--accent); }
+.bg-light { background-color: var(--light-bg); }
+.p-4 { padding: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.rounded { border-radius: 0.25rem; }
+.hidden { display: none; }
+.flex { display: flex; }
+.space-x-2 { gap: 0.5rem; }
+
+/* Triple Line Divider */
+.my-8 {
+    margin-top: 0; /* Remove space above the divider */
+    margin-bottom: 0; /* Adjust space below the divider */
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
     .dashboard-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     
     .sidebar {
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      height: auto;
-      display: flex;
-      justify-content: space-around;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
     }
-  }
-  
-  /* Fancy Font */
-  .fancy-font {
+}
+
+/* Fancy Font */
+.fancy-font {
     font-family: 'Lodeh', serif;
-  }
+}
