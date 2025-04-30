@@ -59,29 +59,30 @@ a:hover {
     margin: 0 auto;
     padding: 0 1rem; /* Ensure content stays within the margins */
     box-sizing: border-box; /* Include padding in width calculations */
-    overflow: hidden; /* Prevent content from overflowing */
+    height: 200vh; /* Ensure enough height for testing sticky behavior */
+    overflow: visible; /* Ensure sticky positioning works */
 }
 
 /* Header/Nav */
 .site-header {
-    border-bottom: 3px double var(--border-color);
-    padding: 0.5rem 0; /* Adjust padding to reduce space around the logo */
-    margin-bottom: 0.5rem; /* Reduce space between the header and the navbar */
+    border-bottom: 0px double var(--border-color);
+    padding: 0; /* Adjust padding to reduce space around the logo */
+    margin-bottom: 0; /* Reduce space between the header and the navbar */
 }
 
 /* Navbar */
 .sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background-color: white;
-    padding: 0.5rem; /* Adjust padding to reduce navbar height */
-    font-size: 0.875rem; /* Adjust font size if needed */
-    margin-bottom: 0.25rem; /* Reduce space below the navbar */
-    margin-top: 0.25rem; /* Reduce space above the navbar */
-    border-bottom: 1px solid var(black ); /* Add a bottom border for separation */
-    max-width: 100%; /* Ensure navbar stays within the container */
-    box-sizing: border-box;
+  position: relative; /* Ensure it stays in its original position */
+  z-index: 50;
+  background-color: white;
+  padding: 0.5rem; /* Match the padding of the sticky clone */
+  font-size: 0.875rem; /* Adjust font size if needed */
+  margin: 0; /* Remove any margins */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+body {
+  margin: 0; /* Ensure no margin interferes with sticky positioning */
 }
 
 .sticky-nav .group .absolute {
@@ -109,6 +110,34 @@ a:hover {
     padding: 0.125rem 0.25rem; /* Reduce padding for the Volunteer button */
     font-size: 0.625rem; /* Reduce font size to half (10px) */
     max-width: 100%; /* Ensure buttons stay within the container */
+}
+
+/* Fixed Navigation Bar */
+.fixed-nav {
+  position: fixed;
+  top: 0; /* Ensure it sticks to the very top */
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it stays on top of other elements */
+  background-color: white; /* Optional: Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+}
+
+/* Sticky Clone Navigation Bar */
+.sticky-clone {
+  position: fixed;
+  top: 0; /* Stick to the very top */
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it stays on top of other elements */
+  background-color: white; /* Match the original navbar's background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  margin: 0; /* Remove any margins */
+  padding: 0.5rem; /* Match the original navbar's padding */
+  display: none; /* Initially hidden */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 
 /* Search Bar Button */
@@ -198,7 +227,7 @@ a:hover {
 /* Triple Line Divider */
 .my-8 {
     margin-top: 0; /* Remove space above the divider */
-    margin-bottom: 0; /* Adjust space below the divider */
+    margin-bottom: 0.125; /* Adjust space below the divider */
 }
 
 /* ===== Responsive Adjustments ===== */

@@ -63,4 +63,27 @@ function updateDate() {
     loadNavbar();
     loadLeadStory();
     loadFooter();
+
+    // Wait for the navbar to load dynamically
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.querySelector('.sticky-nav'); // Select the original navbar
+
+      if (navbar) {
+        const stickyClone = navbar.cloneNode(true); // Create a clone of the navbar
+        stickyClone.classList.add('sticky-clone'); // Add a class to the cloned navbar
+        document.body.appendChild(stickyClone); // Append the cloned navbar to the body
+
+        const triggerPoint = 300; // Distance in pixels to trigger the sticky effect
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > triggerPoint) {
+            stickyClone.style.display = 'block'; // Show the sticky navbar
+          } else {
+            stickyClone.style.display = 'none'; // Hide the sticky navbar
+          }
+        });
+      } else {
+        console.error('Navbar not found. Ensure the .sticky-nav element exists.');
+      }
+    });
   });
